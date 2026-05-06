@@ -1,179 +1,308 @@
+```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaik Haneef | Portfolio</title>
+    <title>Shaik Haneef | Modern Portfolio</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #020617;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #818cf8, #2dd4bf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(59,130,246,0.25), transparent 70%);
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        .glow-2 {
+            position: absolute;
+            right: 0;
+            top: 30%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(20,184,166,0.2), transparent 70%);
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        .card-hover {
+            transition: all 0.35s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(59,130,246,0.2);
+            border-color: rgba(96,165,250,0.4);
+        }
+
+        .hero-btn {
+            transition: 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100 antialiased">
 
-    <nav class="fixed top-0 left-0 w-full bg-slate-900/90 backdrop-blur-md border-b border-slate-800 z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="#home" class="text-xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">SH</a>
-            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
-                <a href="#home" class="hover:text-blue-400 transition">Home</a>
-                <a href="#about" class="hover:text-blue-400 transition">About</a>
-                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
-                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
-                <a href="#training" class="hover:text-blue-400 transition">Training</a>
-                <a href="#certificates" class="hover:text-blue-400 transition">Certificates</a>
-                <a href="#education" class="hover:text-blue-400 transition">Education</a>
-                <a href="#achievements" class="hover:text-blue-400 transition">Achievements</a>
-                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
-            </div>
-            <div class="md:hidden flex items-center">
-                <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-1.5 rounded-md text-xs font-medium transition">Get in Touch</a>
+<body>
+
+    <nav class="fixed top-0 left-0 w-full bg-slate-950/70 backdrop-blur-xl border-b border-slate-800 z-50 shadow-lg shadow-black/10">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+            <a href="#home" class="text-2xl font-extrabold gradient-text tracking-wider">
+                SH
+            </a>
+
+            <div class="hidden md:flex gap-8 text-sm text-slate-300 font-medium">
+                <a href="#home" class="hover:text-blue-400">Home</a>
+                <a href="#about" class="hover:text-blue-400">About</a>
+                <a href="#skills" class="hover:text-blue-400">Skills</a>
+                <a href="#projects" class="hover:text-blue-400">Projects</a>
+                <a href="#contact" class="hover:text-blue-400">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_50%)]"></div>
-        <div class="max-w-4xl mx-auto px-4 text-center z-10">
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
-                Hi, I'm <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-teal-400 bg-clip-text text-transparent">Shaik Haneef</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
-                Computer Science & Engineering Student & Developer specializing in building AI-powered platforms, data structures, and full-stack software solutions.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#projects" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-medium shadow-lg shadow-blue-600/20 transition duration-300">View My Work</a>
-                <a href="#contact" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-6 py-3 rounded-lg font-medium border border-slate-700 transition duration-300">Contact Me</a>
-            </div>
-            <div class="flex justify-center space-x-6 mt-12 text-2xl text-slate-400">
-                <a href="https://linkedin.com/in/shaik-haneef-s411" target="_blank" class="hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/haneefsk411" target="_blank" class="hover:text-slate-50 transition"><i class="fab fa-github"></i></a>
-                <a href="mailto:haneefsk411@gmail.com" class="hover:text-red-400 transition"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </section>
 
-    <section id="about" class="py-24 border-t border-slate-800 bg-slate-900/50">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold tracking-tight">About Me</h2>
-                <div class="w-12 h-1 bg-blue-500 mx-auto mt-2 rounded"></div>
-            </div>
-            <div class="bg-slate-800/50 border border-slate-700/50 p-6 md:p-8 rounded-2xl shadow-xl">
-                <p class="text-slate-300 leading-relaxed text-lg mb-6">
-                    I am a highly motivated Computer Science and Engineering student currently pursuing my degree at Lovely Professional University. I love combining logical problem-solving with software development to build practical, real-world tools. 
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 text-white">
+
+        <div class="glow top-0 left-0"></div>
+        <div class="glow-2"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-16 items-center">
+
+            <div data-aos="fade-right">
+
+                <span class="px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium">
+                    Welcome to my Portfolio
+                </span>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold mt-6 leading-tight">
+                    Hi, I'm
+                    <span class="gradient-text">Shaik Haneef</span>
+                </h1>
+
+                <p class="text-slate-400 text-lg mt-6 leading-relaxed max-w-xl">
+                    Computer Science Engineer, Full Stack Developer, and AI Enthusiast passionate about building scalable software systems and modern web applications.
                 </p>
-                <p class="text-slate-300 leading-relaxed text-lg">
-                    From developing intelligent full-stack AI applications like smart travel planners to modeling time-series healthcare data for risk prediction, I actively design software solutions with structural integrity and cross-platform containerization in mind. 
+
+                <div class="flex flex-wrap gap-4 mt-10">
+
+                    <a href="#projects"
+                       class="hero-btn bg-blue-600 hover:bg-blue-500 px-7 py-3 rounded-xl font-semibold shadow-lg shadow-blue-600/20">
+                        Explore Projects
+                    </a>
+
+                    <a href="#contact"
+                       class="hero-btn border border-slate-700 hover:border-blue-500 hover:bg-slate-900 px-7 py-3 rounded-xl font-semibold">
+                        Contact Me
+                    </a>
+                </div>
+
+                <div class="flex gap-6 mt-10 text-2xl text-slate-400">
+
+                    <a href="https://github.com/haneefsk411" target="_blank" class="hover:text-white transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="https://linkedin.com/in/shaik-haneef-s411" target="_blank" class="hover:text-blue-400 transition">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+
+                    <a href="mailto:haneefsk411@gmail.com" class="hover:text-red-400 transition">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center" data-aos="zoom-in">
+                <div class="relative">
+
+                    <div class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"></div>
+
+                    <img src="https://i.imgur.com/8Km9tLL.png"
+                         class="relative w-[320px] md:w-[420px] rounded-3xl border border-slate-700 shadow-2xl"
+                         alt="Profile Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="py-24 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-6">
+
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
+                    About Me
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-700/50 text-sm text-slate-400">
-                    <div><span class="font-semibold text-slate-200">Location:</span> Karempudi, Andhra Pradesh, India</div>
-                    <div><span class="font-semibold text-slate-200">Email:</span> haneefsk411@gmail.com</div>
+
+                <h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
+                    Who I Am
+                </h2>
+
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-400 mx-auto mt-5 rounded-full"></div>
+            </div>
+
+            <div class="bg-slate-900/50 border border-slate-800 rounded-3xl p-10 text-slate-300 leading-relaxed text-lg card-hover" data-aos="fade-up">
+                I am a highly motivated Computer Science Engineering student at Lovely Professional University. I enjoy combining logical problem-solving with software engineering to build modern, scalable, and intelligent applications.
+
+                <br><br>
+
+                My interests include Full Stack Development, Artificial Intelligence, Cloud Computing, and DevOps technologies.
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills" class="py-24 border-t border-slate-800 bg-slate-950/60">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
+                    Technical Skills
+                </p>
+
+                <h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
+                    Technologies
+                </h2>
+
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-400 mx-auto mt-5 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl" data-aos="fade-up">
+                    <i class="fas fa-code text-4xl text-blue-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-5">Languages</h3>
+
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-slate-800 px-4 py-2 rounded-lg">C++</span>
+                        <span class="bg-slate-800 px-4 py-2 rounded-lg">Python</span>
+                        <span class="bg-slate-800 px-4 py-2 rounded-lg">Java</span>
+                        <span class="bg-slate-800 px-4 py-2 rounded-lg">C</span>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-laptop-code text-4xl text-teal-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-5">Frameworks</h3>
+
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-slate-800 px-4 py-2 rounded-lg">React</span>
+                        <span class="bg-slate-800 px-4 py-2 rounded-lg">Node.js</span>
+                        <span class="bg-slate-800 px-4 py-2 rounded-lg">FastAPI</span>
+                        <span class="bg-slate-800 px-4 py-2 rounded-lg">MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-brain text-4xl text-indigo-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-5">Core Skills</h3>
+
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-slate-800 px-4 py-2 rounded-lg">DSA</span>
+                        <span class="bg-slate-800 px-4 py-2 rounded-lg">Problem Solving</span>
+                        <span class="bg-slate-800 px-4 py-2 rounded-lg">Operating Systems</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-24 border-t border-slate-800">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold tracking-tight">Technical Skills</h2>
-                <div class="w-12 h-1 bg-blue-500 mx-auto mt-2 rounded"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-slate-800/40 border border-slate-800 p-6 rounded-xl hover:border-slate-700 transition">
-                    <div class="text-blue-400 text-2xl mb-4"><i class="fas fa-code"></i></div>
-                    <h3 class="text-lg font-semibold mb-4 text-slate-200">Languages</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-900 px-3 py-1.5 rounded-md text-sm text-slate-300 border border-slate-800">C++</span>
-                        <span class="bg-slate-900 px-3 py-1.5 rounded-md text-sm text-slate-300 border border-slate-800">Python</span>
-                        <span class="bg-slate-900 px-3 py-1.5 rounded-md text-sm text-slate-300 border border-slate-800">Java</span>
-                        <span class="bg-slate-900 px-3 py-1.5 rounded-md text-sm text-slate-300 border border-slate-800">C</span>
-                    </div>
-                </div>
 
-                <div class="bg-slate-800/40 border border-slate-800 p-6 rounded-xl hover:border-slate-700 transition">
-                    <div class="text-teal-400 text-2xl mb-4"><i class="fas fa-laptop-code"></i></div>
-                    <h3 class="text-lg font-semibold mb-4 text-slate-200">Frameworks & Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-900 px-3 py-1.5 rounded-md text-sm text-slate-300 border border-slate-800">Jupyter Notebook</span>
-                        <span class="bg-slate-900 px-3 py-1.5 rounded-md text-sm text-slate-300 border border-slate-800">Google Colab</span>
-                        <span class="bg-slate-900 px-3 py-1.5 rounded-md text-sm text-slate-300 border border-slate-800">Power BI</span>
-                        <span class="bg-slate-900 px-3 py-1.5 rounded-md text-sm text-slate-300 border border-slate-800">Tableau</span>
-                        <span class="bg-slate-900 px-3 py-1.5 rounded-md text-sm text-slate-300 border border-slate-800">HTML & CSS</span>
-                        <span class="bg-slate-900 px-3 py-1.5 rounded-md text-sm text-slate-300 border border-slate-800">MS Excel</span>
-                    </div>
-                </div>
+    <section id="projects" class="py-24 border-t border-slate-800">
 
-                <div class="bg-slate-800/40 border border-slate-800 p-6 rounded-xl hover:border-slate-700 transition">
-                    <div class="text-indigo-400 text-2xl mb-4"><i class="fas fa-brain"></i></div>
-                    <h3 class="text-lg font-semibold mb-4 text-slate-200">Core Engineering</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-900 px-3 py-1.5 rounded-md text-sm text-slate-300 border border-slate-800">Data Structures & Algorithms</span>
-                        <span class="bg-slate-900 px-3 py-1.5 rounded-md text-sm text-slate-300 border border-slate-800">Problem-Solving</span>
-                        <span class="bg-slate-900 px-3 py-1.5 rounded-md text-sm text-slate-300 border border-slate-800">Operating Systems</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <div class="max-w-6xl mx-auto px-6">
 
-    <section id="projects" class="py-24 border-t border-slate-800 bg-slate-900/50">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold tracking-tight">Featured Projects</h2>
-                <div class="w-12 h-1 bg-blue-500 mx-auto mt-2 rounded"></div>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
+                    Featured Work
+                </p>
+
+                <h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
+                    Projects
+                </h2>
+
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-400 mx-auto mt-5 rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-slate-800/60 border border-slate-700/50 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl">
-                    <div class="p-6 md:p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-slate-100">AI Trip Planner</h3>
-                            <span class="text-xs font-semibold text-slate-400 bg-slate-900 px-2 py-1 rounded">Jan 2025</span>
-                        </div>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            Designed an AI-powered platform that generates personalized travel itineraries using user preferences (budget, interests, duration, travel style) and real-time data. Executed backend pipelines to fetch live flights, hotels, and integrated Google Maps APIs for route optimization. Deployed via containerized virtualization.
+            <div class="grid md:grid-cols-2 gap-10">
+
+                <div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden" data-aos="fade-right">
+
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4">AI Trip Planner</h3>
+
+                        <p class="text-slate-400 leading-relaxed">
+                            AI-powered travel planner generating personalized itineraries using user preferences and real-time APIs.
                         </p>
-                        <div class="flex flex-wrap gap-1.5 mb-6">
-                            <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs px-2.5 py-1 rounded-md">React.js</span>
-                            <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs px-2.5 py-1 rounded-md">Node.js</span>
-                            <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs px-2.5 py-1 rounded-md">Python</span>
-                            <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs px-2.5 py-1 rounded-md">MongoDB</span>
-                            <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs px-2.5 py-1 rounded-md">Google Maps API</span>
-                            <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs px-2.5 py-1 rounded-md">Docker</span>
+
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-lg text-sm">React</span>
+                            <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-lg text-sm">Node.js</span>
+                            <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-lg text-sm">MongoDB</span>
+                            <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-lg text-sm">Docker</span>
                         </div>
-                    </div>
-                    <div class="px-6 md:px-8 pb-6 pt-2 border-t border-slate-700/30 bg-slate-800/20">
-                        <a href="https://github.com/haneefsk411-beep/Ai-trip-planner" target="_blank" class="text-sm font-medium text-blue-400 hover:text-blue-300 inline-flex items-center gap-2">
-                            View Repository <i class="fab fa-github"></i>
+
+                        <a href="https://github.com/haneefsk411-beep/Ai-trip-planner"
+                           target="_blank"
+                           class="inline-block mt-8 text-blue-400 font-semibold hover:text-blue-300">
+                            View Project →
                         </a>
                     </div>
                 </div>
 
-                <div class="bg-slate-800/60 border border-slate-700/50 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl">
-                    <div class="p-6 md:p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-slate-100">Health Guard</h3>
-                            <span class="text-xs font-semibold text-slate-400 bg-slate-900 px-2 py-1 rounded">Jun 2024</span>
-                        </div>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            Developed a machine learning-driven platform that analyzes user vitals from wearable devices to predict potential health risks. Built REST APIs to clean and store continuous time-series data for a real-time health dashboard, complete with automated threshold alert logic.
+                <div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden" data-aos="fade-left">
+
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4">Health Guard</h3>
+
+                        <p class="text-slate-400 leading-relaxed">
+                            Machine learning based health monitoring platform that predicts health risks using wearable data.
                         </p>
-                        <div class="flex flex-wrap gap-1.5 mb-6">
-                            <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs px-2.5 py-1 rounded-md">Python</span>
-                            <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs px-2.5 py-1 rounded-md">FastAPI</span>
-                            <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs px-2.5 py-1 rounded-md">React.js</span>
-                            <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs px-2.5 py-1 rounded-md">Scikit-learn</span>
-                            <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs px-2.5 py-1 rounded-md">TensorFlow</span>
-                            <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs px-2.5 py-1 rounded-md">Docker</span>
+
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span class="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-lg text-sm">Python</span>
+                            <span class="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-lg text-sm">FastAPI</span>
+                            <span class="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-lg text-sm">TensorFlow</span>
+                            <span class="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-lg text-sm">Docker</span>
                         </div>
-                    </div>
-                    <div class="px-6 md:px-8 pb-6 pt-2 border-t border-slate-700/30 bg-slate-800/20">
-                        <a href="https://github.com/haneefsk411-beep/Health--guard" target="_blank" class="text-sm font-medium text-blue-400 hover:text-blue-300 inline-flex items-center gap-2">
-                            View Repository <i class="fab fa-github"></i>
+
+                        <a href="https://github.com/haneefsk411-beep/Health--guard"
+                           target="_blank"
+                           class="inline-block mt-8 text-teal-400 font-semibold hover:text-teal-300">
+                            View Project →
                         </a>
                     </div>
                 </div>
@@ -181,197 +310,91 @@
         </div>
     </section>
 
-    <section id="training" class="py-24 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold tracking-tight">Professional Training</h2>
-                <div class="w-12 h-1 bg-blue-500 mx-auto mt-2 rounded"></div>
+
+    <section id="contact" class="py-24 border-t border-slate-800 bg-slate-950/70">
+
+        <div class="max-w-4xl mx-auto px-6 text-center">
+
+            <div data-aos="fade-up">
+                <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
+                    Contact
+                </p>
+
+                <h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
+                    Get In Touch
+                </h2>
+
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-400 mx-auto mt-5 rounded-full"></div>
             </div>
 
-            <div class="relative border-l-2 border-slate-700 ml-4 md:ml-6 space-y-12">
-                <div class="relative pl-8">
-                    <div class="absolute -left-[11px] top-1.5 bg-blue-500 w-5 h-5 rounded-full border-4 border-slate-900"></div>
-                    
-                    <div class="bg-slate-800/40 border border-slate-800 p-6 rounded-xl shadow-md">
-                        <div class="flex flex-wrap justify-between items-baseline mb-4 gap-2">
-                            <div>
-                                <h3 class="text-lg font-bold text-slate-200">Fundamentals of Data Structures using C++</h3>
-                                <p class="text-sm text-blue-400 font-medium">Lovely Professional University (LPU)</p>
-                            </div>
-                            <span class="text-xs text-slate-400 font-mono bg-slate-900 px-2 py-1 rounded">Jun 2025 - Jul 2025</span>
-                        </div>
-                        <ul class="space-y-2 text-slate-400 text-sm list-disc list-inside">
-                            <li>Gained practical understanding of core data structures including arrays, linked lists, stacks, queues, trees, and graphs using C++.</li>
-                            <li>Implemented baseline algorithms for execution tasks like searching, sorting, recursion, and data processing.</li>
-                            <li>Performed exploratory data operations using C++ to read raw datasets, perform cleaning, and render structural data summaries.</li>
-                            <li>Strengthened engineering-centric logic parsing and computational analytics skills.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <form class="mt-14 bg-slate-900 border border-slate-800 rounded-3xl p-10 space-y-6 text-left" data-aos="zoom-in">
 
-    <section id="certificates" class="py-24 border-t border-slate-800 bg-slate-900/50">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold tracking-tight">Certifications</h2>
-                <div class="w-12 h-1 bg-blue-500 mx-auto mt-2 rounded"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-slate-800/50 border border-slate-700/50 p-5 rounded-xl flex flex-col justify-between shadow-md">
-                    <div>
-                        <span class="text-blue-400 text-xl"><i class="fas fa-certificate"></i></span>
-                        <h3 class="font-semibold text-slate-200 mt-2 mb-1">Fundamentals of Data Structures using C++</h3>
-                        <p class="text-xs text-slate-400">Issued by LPU • May 2025</p>
-                    </div>
-                    <a href="#" class="text-xs font-semibold text-blue-400 hover:underline mt-4 inline-block">View Certificate Link <i class="fas fa-external-link-alt text-[10px]"></i></a>
-                </div>
-
-                <div class="bg-slate-800/50 border border-slate-700/50 p-5 rounded-xl flex flex-col justify-between shadow-md">
-                    <div>
-                        <span class="text-indigo-400 text-xl"><i class="fas fa-network-wired"></i></span>
-                        <h3 class="font-semibold text-slate-200 mt-2 mb-1">Computer Communications</h3>
-                        <p class="text-xs text-slate-400">Issued via Coursera • Nov 2024</p>
-                    </div>
-                    <a href="#" class="text-xs font-semibold text-blue-400 hover:underline mt-4 inline-block">View Certificate Link <i class="fas fa-external-link-alt text-[10px]"></i></a>
-                </div>
-
-                <div class="bg-slate-800/50 border border-slate-700/50 p-5 rounded-xl flex flex-col justify-between shadow-md">
-                    <div>
-                        <span class="text-teal-400 text-xl"><i class="fas fa-microchip"></i></span>
-                        <h3 class="font-semibold text-slate-200 mt-2 mb-1">Introduction to Hardware & Operating Systems</h3>
-                        <p class="text-xs text-slate-400">Issued via Coursera • Sep 2024</p>
-                    </div>
-                    <a href="#" class="text-xs font-semibold text-blue-400 hover:underline mt-4 inline-block">View Certificate Link <i class="fas fa-external-link-alt text-[10px]"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="py-24 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold tracking-tight">Education</h2>
-                <div class="w-12 h-1 bg-blue-500 mx-auto mt-2 rounded"></div>
-            </div>
-
-            <div class="space-y-6">
-                <div class="bg-slate-800/30 border border-slate-800/80 p-6 rounded-xl flex flex-col sm:flex-row justify-between gap-4 items-start sm:items-center">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-200">Lovely Professional University</h3>
-                        <p class="text-sm text-slate-400">B.Tech in Computer Science and Engineering</p>
-                        <p class="text-xs font-semibold text-slate-400 mt-1">Location: Phagwara, Punjab</p>
-                    </div>
-                    <div class="sm:text-right">
-                        <span class="bg-blue-500/10 text-blue-400 font-semibold text-xs px-3 py-1 rounded-full border border-blue-500/20">CGPA: 5.7</span>
-                        <p class="text-xs text-slate-500 mt-2 font-mono">Enrolled Since 2023</p>
-                    </div>
-                </div>
-
-                <div class="bg-slate-800/30 border border-slate-800/80 p-6 rounded-xl flex flex-col sm:flex-row justify-between gap-4 items-start sm:items-center">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-200">Oxford Junior College</h3>
-                        <p class="text-sm text-slate-400">12th Standard (Science Stream)</p>
-                        <p class="text-xs font-semibold text-slate-400 mt-1">Location: Narasaraopet, Andhra Pradesh</p>
-                    </div>
-                    <div class="sm:text-right">
-                        <span class="bg-teal-500/10 text-teal-400 font-semibold text-xs px-3 py-1 rounded-full border border-teal-500/20">Percentage: 94.7%</span>
-                        <p class="text-xs text-slate-500 mt-2 font-mono">2021 - 2023</p>
-                    </div>
-                </div>
-
-                <div class="bg-slate-800/30 border border-slate-800/80 p-6 rounded-xl flex flex-col sm:flex-row justify-between gap-4 items-start sm:items-center">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-200">Hindu High School</h3>
-                        <p class="text-sm text-slate-400">10th Standard (Science Stream)</p>
-                        <p class="text-xs font-semibold text-slate-400 mt-1">Location: Piduguralla, Andhra Pradesh</p>
-                    </div>
-                    <div class="sm:text-right">
-                        <span class="bg-indigo-500/10 text-indigo-400 font-semibold text-xs px-3 py-1 rounded-full border border-indigo-500/20">CGPA: 10/10</span>
-                        <p class="text-xs text-slate-500 mt-2 font-mono">2020 - 2021</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="achievements" class="py-24 border-t border-slate-800 bg-slate-900/50">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold tracking-tight">Academic Achievements</h2>
-                <div class="w-12 h-1 bg-blue-500 mx-auto mt-2 rounded"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-800 flex items-start gap-4">
-                    <div class="text-yellow-400 text-3xl"><i class="fas fa-trophy"></i></div>
-                    <div>
-                        <h3 class="font-bold text-slate-200 text-lg">Perfect 10 CGPA</h3>
-                        <p class="text-slate-400 text-sm mt-1">Graduated 10th Grade with a flawless cumulative 10 CGPA metric representation from Hindu High School.</p>
-                    </div>
-                </div>
-
-                <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-800 flex items-start gap-4">
-                    <div class="text-blue-400 text-3xl"><i class="fas fa-star"></i></div>
-                    <div>
-                        <h3 class="font-bold text-slate-200 text-lg">High Performance 12th Board</h3>
-                        <p class="text-slate-400 text-sm mt-1">Secured an exceptional 94.7% score in 12th Standard Board Exams focused heavily on STEM disciplines at Oxford Junior College.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold tracking-tight">Get In Touch</h2>
-                <div class="w-12 h-1 bg-blue-500 mx-auto mt-2 rounded"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left mb-12">
-                <div class="bg-slate-800/30 p-6 rounded-xl border border-slate-800/50">
-                    <div class="text-blue-400 text-xl mb-2"><i class="fas fa-envelope"></i></div>
-                    <h4 class="font-semibold text-slate-200 text-sm">Email Address</h4>
-                    <a href="mailto:haneefsk411@gmail.com" class="text-slate-400 text-sm hover:text-blue-400 break-all">haneefsk411@gmail.com</a>
-                </div>
-
-                <div class="bg-slate-800/30 p-6 rounded-xl border border-slate-800/50">
-                    <div class="text-teal-400 text-xl mb-2"><i class="fas fa-phone-alt"></i></div>
-                    <h4 class="font-semibold text-slate-200 text-sm">Phone Number</h4>
-                    <p class="text-slate-400 text-sm">+91 7981502734</p>
-                </div>
-
-                <div class="bg-slate-800/30 p-6 rounded-xl border border-slate-800/50">
-                    <div class="text-indigo-400 text-xl mb-2"><i class="fab fa-linkedin-in"></i></div>
-                    <h4 class="font-semibold text-slate-200 text-sm">LinkedIn Profile</h4>
-                    <a href="https://linkedin.com/in/shaik-haneef-s411" target="_blank" class="text-slate-400 text-sm hover:text-indigo-400">shaik-haneef-s411</a>
-                </div>
-            </div>
-
-            <form class="max-w-xl mx-auto bg-slate-800/40 p-6 md:p-8 rounded-2xl border border-slate-800 space-y-4" onsubmit="event.preventDefault(); alert('Message logic simulated!');">
                 <div>
-                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Your Name</label>
-                    <input type="text" placeholder="John Doe" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-blue-500 text-slate-200">
+                    <label class="text-sm text-slate-400">Name</label>
+                    <input type="text"
+                           class="w-full mt-2 bg-slate-950 border border-slate-700 rounded-xl px-5 py-3 focus:outline-none focus:border-blue-500">
                 </div>
+
                 <div>
-                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Email Address</label>
-                    <input type="email" placeholder="john@example.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-blue-500 text-slate-200">
+                    <label class="text-sm text-slate-400">Email</label>
+                    <input type="email"
+                           class="w-full mt-2 bg-slate-950 border border-slate-700 rounded-xl px-5 py-3 focus:outline-none focus:border-blue-500">
                 </div>
+
                 <div>
-                    <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Message</label>
-                    <textarea rows="4" placeholder="Hello..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-blue-500 text-slate-200"></textarea>
+                    <label class="text-sm text-slate-400">Message</label>
+                    <textarea rows="5"
+                              class="w-full mt-2 bg-slate-950 border border-slate-700 rounded-xl px-5 py-3 focus:outline-none focus:border-blue-500"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2.5 rounded-lg text-sm transition shadow-md shadow-blue-600/10">Send Message</button>
+
+                <button class="w-full bg-blue-600 hover:bg-blue-500 py-4 rounded-xl font-semibold text-lg transition">
+                    Send Message
+                </button>
             </form>
         </div>
     </section>
 
-    <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-xs text-slate-500">
-        <p>&copy; 2026 Shaik Haneef. All rights reserved.</p>
+
+    <footer class="py-10 bg-black border-t border-slate-800 text-center text-slate-500 text-sm">
+
+        <p class="gradient-text font-semibold text-2xl">
+            Shaik Haneef
+        </p>
+
+        <p class="mt-3 text-slate-400">
+            Building modern software experiences with creativity and engineering.
+        </p>
+
+        <div class="flex justify-center gap-6 mt-6 text-2xl">
+
+            <a href="https://github.com/haneefsk411" class="hover:text-white transition">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://linkedin.com/in/shaik-haneef-s411" class="hover:text-blue-400 transition">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="mailto:haneefsk411@gmail.com" class="hover:text-red-400 transition">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <p class="mt-6 text-xs text-slate-600">
+            © 2026 Shaik Haneef. All rights reserved.
+        </p>
     </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 
 </body>
 </html>
+```
