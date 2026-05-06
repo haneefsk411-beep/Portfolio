@@ -1,400 +1,205 @@
-```html
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaik Haneef | Modern Portfolio</title>
+<!-- SKILLS SECTION -->
+<section id="skills" class="py-24 border-t border-slate-800 bg-slate-950/60">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <div class="max-w-6xl mx-auto px-6">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <div class="text-center mb-16" data-aos="fade-up">
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+            <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
+                Technical Skills
+            </p>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+            <h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
+                Technologies & Tools
+            </h2>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #020617;
-            color: white;
-            overflow-x: hidden;
-        }
-
-        .gradient-text {
-            background: linear-gradient(to right, #60a5fa, #818cf8, #2dd4bf);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .glow {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(59,130,246,0.25), transparent 70%);
-            filter: blur(80px);
-            z-index: 0;
-        }
-
-        .glow-2 {
-            position: absolute;
-            right: 0;
-            top: 30%;
-            width: 450px;
-            height: 450px;
-            background: radial-gradient(circle, rgba(20,184,166,0.2), transparent 70%);
-            filter: blur(80px);
-            z-index: 0;
-        }
-
-        .card-hover {
-            transition: all 0.35s ease;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(59,130,246,0.2);
-            border-color: rgba(96,165,250,0.4);
-        }
-
-        .hero-btn {
-            transition: 0.3s ease;
-        }
-
-        .hero-btn:hover {
-            transform: scale(1.05);
-        }
-    </style>
-</head>
-
-<body>
-
-    <nav class="fixed top-0 left-0 w-full bg-slate-950/70 backdrop-blur-xl border-b border-slate-800 z-50 shadow-lg shadow-black/10">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-
-            <a href="#home" class="text-2xl font-extrabold gradient-text tracking-wider">
-                SH
-            </a>
-
-            <div class="hidden md:flex gap-8 text-sm text-slate-300 font-medium">
-                <a href="#home" class="hover:text-blue-400">Home</a>
-                <a href="#about" class="hover:text-blue-400">About</a>
-                <a href="#skills" class="hover:text-blue-400">Skills</a>
-                <a href="#projects" class="hover:text-blue-400">Projects</a>
-                <a href="#contact" class="hover:text-blue-400">Contact</a>
-            </div>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-400 mx-auto mt-5 rounded-full"></div>
         </div>
-    </nav>
 
+        <div class="grid md:grid-cols-3 gap-8">
 
-    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 text-white">
+            <!-- Languages -->
+            <div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl" data-aos="fade-up">
 
-        <div class="glow top-0 left-0"></div>
-        <div class="glow-2"></div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-16 items-center">
-
-            <div data-aos="fade-right">
-
-                <span class="px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium">
-                    Welcome to my Portfolio
-                </span>
-
-                <h1 class="text-5xl md:text-7xl font-extrabold mt-6 leading-tight">
-                    Hi, I'm
-                    <span class="gradient-text">Shaik Haneef</span>
-                </h1>
-
-                <p class="text-slate-400 text-lg mt-6 leading-relaxed max-w-xl">
-                    Computer Science Engineer, Full Stack Developer, and AI Enthusiast passionate about building scalable software systems and modern web applications.
-                </p>
-
-                <div class="flex flex-wrap gap-4 mt-10">
-
-                    <a href="#projects"
-                       class="hero-btn bg-blue-600 hover:bg-blue-500 px-7 py-3 rounded-xl font-semibold shadow-lg shadow-blue-600/20">
-                        Explore Projects
-                    </a>
-
-                    <a href="#contact"
-                       class="hero-btn border border-slate-700 hover:border-blue-500 hover:bg-slate-900 px-7 py-3 rounded-xl font-semibold">
-                        Contact Me
-                    </a>
-                </div>
-
-                <div class="flex gap-6 mt-10 text-2xl text-slate-400">
-
-                    <a href="https://github.com/haneefsk411" target="_blank" class="hover:text-white transition">
-                        <i class="fab fa-github"></i>
-                    </a>
-
-                    <a href="https://linkedin.com/in/shaik-haneef-s411" target="_blank" class="hover:text-blue-400 transition">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-
-                    <a href="mailto:haneefsk411@gmail.com" class="hover:text-red-400 transition">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="flex justify-center" data-aos="zoom-in">
-                <div class="relative">
-
-                    <div class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"></div>
-
-                    <img src="https://i.imgur.com/8Km9tLL.png"
-                         class="relative w-[320px] md:w-[420px] rounded-3xl border border-slate-700 shadow-2xl"
-                         alt="Profile Image">
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="about" class="py-24 border-t border-slate-800">
-        <div class="max-w-5xl mx-auto px-6">
-
-            <div class="text-center mb-16" data-aos="fade-up">
-                <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
-                    About Me
-                </p>
-
-                <h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
-                    Who I Am
-                </h2>
-
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-400 mx-auto mt-5 rounded-full"></div>
-            </div>
-
-            <div class="bg-slate-900/50 border border-slate-800 rounded-3xl p-10 text-slate-300 leading-relaxed text-lg card-hover" data-aos="fade-up">
-                I am a highly motivated Computer Science Engineering student at Lovely Professional University. I enjoy combining logical problem-solving with software engineering to build modern, scalable, and intelligent applications.
-
-                <br><br>
-
-                My interests include Full Stack Development, Artificial Intelligence, Cloud Computing, and DevOps technologies.
-            </div>
-        </div>
-    </section>
-
-
-    <section id="skills" class="py-24 border-t border-slate-800 bg-slate-950/60">
-        <div class="max-w-6xl mx-auto px-6">
-
-            <div class="text-center mb-16" data-aos="fade-up">
-                <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
-                    Technical Skills
-                </p>
-
-                <h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
-                    Technologies
-                </h2>
-
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-400 mx-auto mt-5 rounded-full"></div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-
-                <div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl" data-aos="fade-up">
-                    <i class="fas fa-code text-4xl text-blue-400 mb-6"></i>
-                    <h3 class="text-2xl font-bold mb-5">Languages</h3>
-
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-slate-800 px-4 py-2 rounded-lg">C++</span>
-                        <span class="bg-slate-800 px-4 py-2 rounded-lg">Python</span>
-                        <span class="bg-slate-800 px-4 py-2 rounded-lg">Java</span>
-                        <span class="bg-slate-800 px-4 py-2 rounded-lg">C</span>
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="bg-blue-500/10 p-4 rounded-2xl">
+                        <i class="fas fa-code text-4xl text-blue-400"></i>
                     </div>
-                </div>
 
-                <div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-laptop-code text-4xl text-teal-400 mb-6"></i>
-                    <h3 class="text-2xl font-bold mb-5">Frameworks</h3>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">
+                            Programming
+                        </h3>
 
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-slate-800 px-4 py-2 rounded-lg">React</span>
-                        <span class="bg-slate-800 px-4 py-2 rounded-lg">Node.js</span>
-                        <span class="bg-slate-800 px-4 py-2 rounded-lg">FastAPI</span>
-                        <span class="bg-slate-800 px-4 py-2 rounded-lg">MongoDB</span>
-                    </div>
-                </div>
-
-                <div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="400">
-                    <i class="fas fa-brain text-4xl text-indigo-400 mb-6"></i>
-                    <h3 class="text-2xl font-bold mb-5">Core Skills</h3>
-
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-slate-800 px-4 py-2 rounded-lg">DSA</span>
-                        <span class="bg-slate-800 px-4 py-2 rounded-lg">Problem Solving</span>
-                        <span class="bg-slate-800 px-4 py-2 rounded-lg">Operating Systems</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="projects" class="py-24 border-t border-slate-800">
-
-        <div class="max-w-6xl mx-auto px-6">
-
-            <div class="text-center mb-16" data-aos="fade-up">
-                <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
-                    Featured Work
-                </p>
-
-                <h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
-                    Projects
-                </h2>
-
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-400 mx-auto mt-5 rounded-full"></div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-10">
-
-                <div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden" data-aos="fade-right">
-
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-4">AI Trip Planner</h3>
-
-                        <p class="text-slate-400 leading-relaxed">
-                            AI-powered travel planner generating personalized itineraries using user preferences and real-time APIs.
+                        <p class="text-slate-400 text-sm">
+                            Core development languages
                         </p>
+                    </div>
+                </div>
 
-                        <div class="flex flex-wrap gap-2 mt-6">
-                            <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-lg text-sm">React</span>
-                            <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-lg text-sm">Node.js</span>
-                            <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-lg text-sm">MongoDB</span>
-                            <span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-lg text-sm">Docker</span>
+                <div class="space-y-4">
+
+                    <div class="flex items-center justify-between bg-slate-800/70 px-5 py-4 rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-python text-2xl text-yellow-400"></i>
+                            <span>Python</span>
                         </div>
 
-                        <a href="https://github.com/haneefsk411-beep/Ai-trip-planner"
-                           target="_blank"
-                           class="inline-block mt-8 text-blue-400 font-semibold hover:text-blue-300">
-                            View Project →
-                        </a>
+                        <span class="text-sm text-blue-400">Advanced</span>
                     </div>
-                </div>
 
-                <div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden" data-aos="fade-left">
-
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-4">Health Guard</h3>
-
-                        <p class="text-slate-400 leading-relaxed">
-                            Machine learning based health monitoring platform that predicts health risks using wearable data.
-                        </p>
-
-                        <div class="flex flex-wrap gap-2 mt-6">
-                            <span class="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-lg text-sm">Python</span>
-                            <span class="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-lg text-sm">FastAPI</span>
-                            <span class="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-lg text-sm">TensorFlow</span>
-                            <span class="bg-teal-500/10 text-teal-400 px-3 py-1 rounded-lg text-sm">Docker</span>
+                    <div class="flex items-center justify-between bg-slate-800/70 px-5 py-4 rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-java text-2xl text-red-400"></i>
+                            <span>Java</span>
                         </div>
 
-                        <a href="https://github.com/haneefsk411-beep/Health--guard"
-                           target="_blank"
-                           class="inline-block mt-8 text-teal-400 font-semibold hover:text-teal-300">
-                            View Project →
-                        </a>
+                        <span class="text-sm text-blue-400">Intermediate</span>
+                    </div>
+
+                    <div class="flex items-center justify-between bg-slate-800/70 px-5 py-4 rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-code text-2xl text-cyan-400"></i>
+                            <span>C++</span>
+                        </div>
+
+                        <span class="text-sm text-blue-400">Advanced</span>
+                    </div>
+
+                    <div class="flex items-center justify-between bg-slate-800/70 px-5 py-4 rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-terminal text-2xl text-green-400"></i>
+                            <span>C</span>
+                        </div>
+
+                        <span class="text-sm text-blue-400">Intermediate</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Frameworks -->
+            <div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="bg-teal-500/10 p-4 rounded-2xl">
+                        <i class="fas fa-laptop-code text-4xl text-teal-400"></i>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">
+                            Frameworks
+                        </h3>
+
+                        <p class="text-slate-400 text-sm">
+                            Modern technologies & backend
+                        </p>
                     </div>
                 </div>
+
+                <div class="space-y-4">
+
+                    <div class="flex items-center justify-between bg-slate-800/70 px-5 py-4 rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-react text-2xl text-cyan-400"></i>
+                            <span>React.js</span>
+                        </div>
+
+                        <span class="text-sm text-teal-400">Frontend</span>
+                    </div>
+
+                    <div class="flex items-center justify-between bg-slate-800/70 px-5 py-4 rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-node-js text-2xl text-green-400"></i>
+                            <span>Node.js</span>
+                        </div>
+
+                        <span class="text-sm text-teal-400">Backend</span>
+                    </div>
+
+                    <div class="flex items-center justify-between bg-slate-800/70 px-5 py-4 rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-server text-2xl text-emerald-400"></i>
+                            <span>FastAPI</span>
+                        </div>
+
+                        <span class="text-sm text-teal-400">API</span>
+                    </div>
+
+                    <div class="flex items-center justify-between bg-slate-800/70 px-5 py-4 rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-database text-2xl text-green-500"></i>
+                            <span>MongoDB</span>
+                        </div>
+
+                        <span class="text-sm text-teal-400">Database</span>
+                    </div>
+
+                </div>
             </div>
-        </div>
-    </section>
 
 
-    <section id="contact" class="py-24 border-t border-slate-800 bg-slate-950/70">
+            <!-- Data Analytics -->
+            <div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="400">
 
-        <div class="max-w-4xl mx-auto px-6 text-center">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="bg-indigo-500/10 p-4 rounded-2xl">
+                        <i class="fas fa-chart-line text-4xl text-indigo-400"></i>
+                    </div>
 
-            <div data-aos="fade-up">
-                <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
-                    Contact
-                </p>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">
+                            Data Analytics
+                        </h3>
 
-                <h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
-                    Get In Touch
-                </h2>
+                        <p class="text-slate-400 text-sm">
+                            Visualization & analytics tools
+                        </p>
+                    </div>
+                </div>
 
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-teal-400 mx-auto mt-5 rounded-full"></div>
+                <div class="space-y-4">
+
+                    <div class="flex items-center justify-between bg-slate-800/70 px-5 py-4 rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-chart-bar text-2xl text-yellow-400"></i>
+                            <span>Power BI</span>
+                        </div>
+
+                        <span class="text-sm text-indigo-400">Dashboard</span>
+                    </div>
+
+                    <div class="flex items-center justify-between bg-slate-800/70 px-5 py-4 rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-table text-2xl text-blue-400"></i>
+                            <span>Tableau</span>
+                        </div>
+
+                        <span class="text-sm text-indigo-400">Visualization</span>
+                    </div>
+
+                    <div class="flex items-center justify-between bg-slate-800/70 px-5 py-4 rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-file-excel text-2xl text-green-400"></i>
+                            <span>Excel</span>
+                        </div>
+
+                        <span class="text-sm text-indigo-400">Analysis</span>
+                    </div>
+
+                    <div class="flex items-center justify-between bg-slate-800/70 px-5 py-4 rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-brain text-2xl text-pink-400"></i>
+                            <span>Machine Learning</span>
+                        </div>
+
+                        <span class="text-sm text-indigo-400">AI</span>
+                    </div>
+
+                </div>
             </div>
 
-            <form class="mt-14 bg-slate-900 border border-slate-800 rounded-3xl p-10 space-y-6 text-left" data-aos="zoom-in">
-
-                <div>
-                    <label class="text-sm text-slate-400">Name</label>
-                    <input type="text"
-                           class="w-full mt-2 bg-slate-950 border border-slate-700 rounded-xl px-5 py-3 focus:outline-none focus:border-blue-500">
-                </div>
-
-                <div>
-                    <label class="text-sm text-slate-400">Email</label>
-                    <input type="email"
-                           class="w-full mt-2 bg-slate-950 border border-slate-700 rounded-xl px-5 py-3 focus:outline-none focus:border-blue-500">
-                </div>
-
-                <div>
-                    <label class="text-sm text-slate-400">Message</label>
-                    <textarea rows="5"
-                              class="w-full mt-2 bg-slate-950 border border-slate-700 rounded-xl px-5 py-3 focus:outline-none focus:border-blue-500"></textarea>
-                </div>
-
-                <button class="w-full bg-blue-600 hover:bg-blue-500 py-4 rounded-xl font-semibold text-lg transition">
-                    Send Message
-                </button>
-            </form>
         </div>
-    </section>
-
-
-    <footer class="py-10 bg-black border-t border-slate-800 text-center text-slate-500 text-sm">
-
-        <p class="gradient-text font-semibold text-2xl">
-            Shaik Haneef
-        </p>
-
-        <p class="mt-3 text-slate-400">
-            Building modern software experiences with creativity and engineering.
-        </p>
-
-        <div class="flex justify-center gap-6 mt-6 text-2xl">
-
-            <a href="https://github.com/haneefsk411" class="hover:text-white transition">
-                <i class="fab fa-github"></i>
-            </a>
-
-            <a href="https://linkedin.com/in/shaik-haneef-s411" class="hover:text-blue-400 transition">
-                <i class="fab fa-linkedin"></i>
-            </a>
-
-            <a href="mailto:haneefsk411@gmail.com" class="hover:text-red-400 transition">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
-
-        <p class="mt-6 text-xs text-slate-600">
-            © 2026 Shaik Haneef. All rights reserved.
-        </p>
-    </footer>
-
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-    </script>
-
-</body>
-</html>
-```
+    </div>
+</section>
