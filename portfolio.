@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaik Haneef | Portfolio</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Inter',sans-serif;
+            background:#020617;
+            color:white;
+            overflow-x:hidden;
+        }
+
+        .gradient-text{
+            background:linear-gradient(to right,#60a5fa,#818cf8,#2dd4bf);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+
+        .card-hover{
+            transition:0.4s ease;
+        }
+
+        .card-hover:hover{
+            transform:translateY(-10px) scale(1.02);
+            box-shadow:0 20px 40px rgba(59,130,246,0.2);
+            border-color:rgba(96,165,250,0.4);
+        }
+
+        .hero-btn{
+            transition:0.3s ease;
+        }
+
+        .hero-btn:hover{
+            transform:scale(1.05);
+        }
+
+        .glow{
+            position:absolute;
+            width:500px;
+            height:500px;
+            background:radial-gradient(circle,rgba(59,130,246,0.25),transparent 70%);
+            filter:blur(80px);
+            z-index:0;
+        }
+
+        .glow-2{
+            position:absolute;
+            right:0;
+            top:30%;
+            width:450px;
+            height:450px;
+            background:radial-gradient(circle,rgba(20,184,166,0.2),transparent 70%);
+            filter:blur(80px);
+            z-index:0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="fixed top-0 left-0 w-full bg-slate-950/70 backdrop-blur-xl border-b border-slate-800 z-50">
+
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <a href="#home"
+           class="text-2xl font-extrabold gradient-text">
+            SH
+        </a>
+
+        <div class="hidden md:flex gap-8 text-sm text-slate-300 font-medium">
+
+            <a href="#home" class="hover:text-blue-400">Home</a>
+            <a href="#about" class="hover:text-blue-400">About</a>
+            <a href="#skills" class="hover:text-blue-400">Skills</a>
+            <a href="#projects" class="hover:text-blue-400">Projects</a>
+            <a href="#certificates" class="hover:text-blue-400">Certificates</a>
+            <a href="#education" class="hover:text-blue-400">Education</a>
+            <a href="#contact" class="hover:text-blue-400">Contact</a>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<section id="home"
+         class="relative min-h-screen flex items-center justify-center overflow-hidden">
+
+    <div class="glow top-0 left-0"></div>
+    <div class="glow-2"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-16 items-center">
+
+        <div data-aos="fade-right">
+
+            <span class="px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium">
+                Welcome to my Portfolio
+            </span>
+
+            <h1 class="text-5xl md:text-7xl font-extrabold mt-6 leading-tight">
+
+                Hi, I'm
+                <span class="gradient-text">
+                    Shaik Haneef
+                </span>
+
+            </h1>
+
+            <h2 class="text-2xl md:text-3xl font-semibold mt-5 text-slate-300">
+                <span id="typing"></span>
+            </h2>
+
+            <p class="text-slate-400 text-lg mt-6 leading-relaxed max-w-xl">
+
+                Data Analyst and Computer Science Engineer passionate about transforming raw data into meaningful insights through analytics, visualization, and intelligent decision-making solutions.
+
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-10">
+
+                <a href="#projects"
+                   class="hero-btn bg-blue-600 hover:bg-blue-500 px-7 py-3 rounded-xl font-semibold">
+
+                    Explore Projects
+                </a>
+
+                <a href="#contact"
+                   class="hero-btn border border-slate-700 hover:border-blue-500 px-7 py-3 rounded-xl font-semibold">
+
+                    Contact Me
+                </a>
+
+                <a href="resume.pdf"
+                   download
+                   class="hero-btn bg-emerald-600 hover:bg-emerald-500 px-7 py-3 rounded-xl font-semibold">
+
+                    Download Resume
+                </a>
+
+            </div>
+
+            <div class="flex gap-6 mt-10 text-2xl text-slate-400">
+
+                <a href="https://github.com/haneefsk411-beep"
+                   target="_blank"
+                   class="hover:text-white">
+
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/shaik-haneef-s411"
+                   target="_blank"
+                   class="hover:text-blue-400">
+
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:haneefsk411@gmail.com"
+                   class="hover:text-red-400">
+
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="flex justify-center" data-aos="zoom-in">
+
+            <img src="images/profile.jpg"
+                 class="relative w-[340px] h-[420px] object-cover rounded-[30px] border border-slate-700 shadow-2xl hover:scale-105 transition duration-500"
+                 alt="Shaik Haneef">
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about"
+         class="py-24 border-t border-slate-800">
+
+    <div class="max-w-5xl mx-auto px-6">
+
+        <div class="text-center mb-16">
+
+            <p class="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold mb-3">
+                About Me
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
+                Who I Am
+            </h2>
+
+        </div>
+
+        <div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl p-10 text-slate-300 leading-relaxed text-lg">
+
+            I am a highly motivated Computer Science Engineering student at Lovely Professional University with strong interests in Data Analytics, Full Stack Development, Artificial Intelligence, and Cloud Computing.
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- STATS -->
+
+<section class="py-20 border-t border-slate-800 bg-slate-950/40">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+        <div class="grid md:grid-cols-4 gap-8 text-center">
+
+            <div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl">
+                <h2 class="text-5xl font-extrabold gradient-text">5+</h2>
+                <p class="text-slate-400 mt-3">Projects Completed</p>
+            </div>
+
+            <div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl">
+                <h2 class="text-5xl font-extrabold gradient-text">3+</h2>
+                <p class="text-slate-400 mt-3">Certifications</p>
+            </div>
+
+            <div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl">
+                <h2 class="text-5xl font-extrabold gradient-text">10+</h2>
+                <p class="text-slate-400 mt-3">Technologies</p>
+            </div>
+
+            <div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl">
+                <h2 class="text-5xl font-extrabold gradient-text">2023</h2>
+                <p class="text-slate-400 mt-3">Started Engineering</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills"
+         class="py-24 border-t border-slate-800">
+
+<div class="max-w-6xl mx-auto px-6">
+
+<div class="text-center mb-16">
+
+<h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
+Skills & Technologies
+</h2>
+
+</div>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl">
+
+<i class="fab fa-python text-5xl text-yellow-400 mb-6"></i>
+
+<h3 class="text-2xl font-bold mb-5">
+Programming
+</h3>
+
+<div class="space-y-3 text-slate-300">
+
+<p>Python</p>
+<p>Java</p>
+<p>C++</p>
+<p>C</p>
+
+</div>
+</div>
+
+<div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl">
+
+<i class="fab fa-react text-5xl text-cyan-400 mb-6"></i>
+
+<h3 class="text-2xl font-bold mb-5">
+Frameworks
+</h3>
+
+<div class="space-y-3 text-slate-300">
+
+<p>React.js</p>
+<p>Node.js</p>
+<p>FastAPI</p>
+<p>MongoDB</p>
+
+</div>
+</div>
+
+<div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl">
+
+<i class="fas fa-chart-line text-5xl text-indigo-400 mb-6"></i>
+
+<h3 class="text-2xl font-bold mb-5">
+Data Analytics
+</h3>
+
+<div class="space-y-3 text-slate-300">
+
+<p>Power BI</p>
+<p>Tableau</p>
+<p>Excel</p>
+<p>Machine Learning</p>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects"
+         class="py-24 border-t border-slate-800">
+
+<div class="max-w-6xl mx-auto px-6">
+
+<div class="text-center mb-16">
+
+<h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
+Projects
+</h2>
+
+</div>
+
+<div class="grid md:grid-cols-2 gap-10">
+
+<!-- AI TRIP -->
+
+<div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden">
+
+<div class="p-8">
+
+<h3 class="text-2xl font-bold mb-4">
+AI Trip Planner
+</h3>
+
+<p class="text-slate-400 leading-relaxed">
+
+AI-powered travel planner generating personalized itineraries using user preferences and real-time APIs.
+
+</p>
+
+<div class="flex flex-wrap gap-2 mt-6">
+
+<span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-lg text-sm">React</span>
+<span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-lg text-sm">Node.js</span>
+<span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-lg text-sm">MongoDB</span>
+<span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-lg text-sm">Docker</span>
+
+</div>
+
+<a href="https://github.com/haneefsk411-beep/Ai-trip-planner"
+   target="_blank"
+   class="inline-block mt-8 text-blue-400 font-semibold">
+
+View Project →
+
+</a>
+</div>
+</div>
+
+
+<!-- ANIME -->
+
+<div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden">
+
+<div class="p-8">
+
+<h3 class="text-2xl font-bold mb-4">
+Anime Discovery Web App
+</h3>
+
+<p class="text-slate-400 leading-relaxed">
+
+Modern full-stack anime discovery platform built using Spring Boot, Maven, and Docker with real-time anime search and responsive UI.
+
+</p>
+
+<div class="flex flex-wrap gap-2 mt-6">
+
+<span class="bg-pink-500/10 text-pink-400 px-3 py-1 rounded-lg text-sm">Spring Boot</span>
+<span class="bg-orange-500/10 text-orange-400 px-3 py-1 rounded-lg text-sm">Maven</span>
+<span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-lg text-sm">Docker</span>
+<span class="bg-green-500/10 text-green-400 px-3 py-1 rounded-lg text-sm">REST API</span>
+
+</div>
+
+<a href="https://github.com/haneefsk411-beep/INT-332-PROJECT"
+   target="_blank"
+   class="inline-block mt-8 text-pink-400 font-semibold">
+
+View Project →
+
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CERTIFICATES -->
+
+<section id="certificates"
+         class="py-24 border-t border-slate-800 bg-slate-950/60">
+
+<div class="max-w-6xl mx-auto px-6">
+
+<div class="text-center mb-16">
+
+<h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
+Certificates
+</h2>
+
+</div>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl p-8">
+
+<i class="fas fa-network-wired text-4xl text-blue-400 mb-6"></i>
+
+<h3 class="text-2xl font-bold mb-3">
+Computer Communications
+</h3>
+
+<a href="https://drive.google.com/file/d/1m0h7nZzkmBE8SDzmazVJrM76DtuR3HYF/view"
+   target="_blank"
+   class="text-blue-400">
+
+View Certificate →
+
+</a>
+
+</div>
+
+<div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl p-8">
+
+<i class="fas fa-code text-4xl text-teal-400 mb-6"></i>
+
+<h3 class="text-2xl font-bold mb-3">
+Introduction to Software
+</h3>
+
+<a href="https://drive.google.com/file/d/1j8bUAm3lLUFxbMUAm-oFRwKI_MNJRfvn/view"
+   target="_blank"
+   class="text-teal-400">
+
+View Certificate →
+
+</a>
+
+</div>
+
+<div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl p-8">
+
+<i class="fas fa-database text-4xl text-indigo-400 mb-6"></i>
+
+<h3 class="text-2xl font-bold mb-3">
+Fundamental Data Structures
+</h3>
+
+<a href="https://drive.google.com/file/d/1KZle4QqqKECYJH8LArC6ojMyEvaWMCvs/view"
+   target="_blank"
+   class="text-indigo-400">
+
+View Certificate →
+
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education"
+         class="py-24 border-t border-slate-800">
+
+<div class="max-w-5xl mx-auto px-6">
+
+<div class="text-center mb-16">
+
+<h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
+Education
+</h2>
+
+</div>
+
+<div class="space-y-8">
+
+<div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl">
+
+<h3 class="text-2xl font-bold">
+Lovely Professional University
+</h3>
+
+<p class="text-blue-400 mt-2">
+B.Tech CSE
+</p>
+
+<p class="text-slate-400 mt-2">
+2023 - Present
+</p>
+
+</div>
+
+<div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl">
+
+<h3 class="text-2xl font-bold">
+Oxford Junior College
+</h3>
+
+<p class="text-teal-400 mt-2">
+94.7%
+</p>
+
+</div>
+
+<div class="card-hover bg-slate-900 border border-slate-800 p-8 rounded-3xl">
+
+<h3 class="text-2xl font-bold">
+Hindu High School
+</h3>
+
+<p class="text-indigo-400 mt-2">
+10 CGPA
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact"
+         class="py-24 border-t border-slate-800 bg-slate-950/70">
+
+<div class="max-w-6xl mx-auto px-6 text-center">
+
+<h2 class="text-4xl md:text-5xl font-extrabold gradient-text">
+Get In Touch
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8 mt-14">
+
+<div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl p-8">
+
+<i class="fas fa-envelope text-4xl text-blue-400 mb-5"></i>
+
+<h3 class="text-xl font-bold mb-3">
+Email
+</h3>
+
+<a href="mailto:haneefsk411@gmail.com"
+   class="text-slate-400">
+
+haneefsk411@gmail.com
+
+</a>
+</div>
+
+<div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl p-8">
+
+<i class="fab fa-linkedin text-4xl text-cyan-400 mb-5"></i>
+
+<h3 class="text-xl font-bold mb-3">
+LinkedIn
+</h3>
+
+<a href="https://linkedin.com/in/shaik-haneef-s411"
+   target="_blank"
+   class="text-slate-400">
+
+View Profile
+
+</a>
+</div>
+
+<div class="card-hover bg-slate-900 border border-slate-800 rounded-3xl p-8">
+
+<i class="fab fa-github text-4xl text-white mb-5"></i>
+
+<h3 class="text-xl font-bold mb-3">
+GitHub
+</h3>
+
+<a href="https://github.com/haneefsk411-beep"
+   target="_blank"
+   class="text-slate-400">
+
+View Repositories
+
+</a>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="py-10 bg-black border-t border-slate-800 text-center text-slate-500 text-sm">
+
+<p class="gradient-text font-semibold text-2xl">
+Shaik Haneef
+</p>
+
+<p class="mt-3 text-slate-400">
+Building modern software experiences with creativity and engineering.
+</p>
+
+<div class="flex justify-center gap-6 mt-6 text-2xl">
+
+<a href="https://github.com/haneefsk411-beep">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://linkedin.com/in/shaik-haneef-s411">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="mailto:haneefsk411@gmail.com">
+<i class="fas fa-envelope"></i>
+</a>
+
+</div>
+
+<p class="mt-6 text-xs text-slate-600">
+© 2026 Shaik Haneef. All rights reserved.
+</p>
+
+</footer>
+
+
+<!-- SCROLL TOP -->
+
+<button id="scrollTopBtn"
+class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-500 text-white p-4 rounded-full shadow-xl hidden z-50">
+
+<i class="fas fa-arrow-up"></i>
+
+</button>
+
+
+<!-- AOS -->
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+duration:1000,
+once:true
+});
+
+const scrollBtn=document.getElementById("scrollTopBtn");
+
+window.onscroll=function(){
+
+if(document.body.scrollTop>300||document.documentElement.scrollTop>300){
+
+scrollBtn.classList.remove("hidden");
+
+}else{
+
+scrollBtn.classList.add("hidden");
+
+}
+};
+
+scrollBtn.onclick=function(){
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
+};
+
+const texts=[
+"Data Analyst",
+"Full Stack Developer",
+"AI Enthusiast",
+"Problem Solver"
+];
+
+let count=0;
+let index=0;
+let currentText='';
+let letter='';
+
+(function type(){
+
+if(count===texts.length){
+count=0;
+}
+
+currentText=texts[count];
+letter=currentText.slice(0,++index);
+
+document.getElementById('typing').textContent=letter;
+
+if(letter.length===currentText.length){
+
+count++;
+index=0;
+
+setTimeout(type,1500);
+
+}else{
+
+setTimeout(type,120);
+
+}
+
+})();
+
+</script>
+
+</body>
+</html>
